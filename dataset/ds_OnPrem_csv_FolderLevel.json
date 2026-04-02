@@ -1,0 +1,25 @@
+{
+	"name": "ds_OnPrem_csv_FolderLevel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "onPrem_cDrive_ls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "adf_project"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

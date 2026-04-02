@@ -1,0 +1,39 @@
+{
+	"name": "ds_adls_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "adf_project"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "tracking.json",
+				"fileSystem": "monitoring"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"last_run_time": {
+					"type": "string"
+				},
+				"last_run_status": {
+					"type": "string"
+				},
+				"last_run_id": {
+					"type": "string"
+				},
+				"updated_at": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

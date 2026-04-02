@@ -1,0 +1,6 @@
+{
+	"name": "adf-analytics-selfHosted-IR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "adfanalyticspipeline",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1d700f68-e0e9-4ced-bb06-a44009e2e95d",
+		"tenantId": "0eb276c1-18ca-4c56-8b9d-58db891810ba"
+	}
+}
