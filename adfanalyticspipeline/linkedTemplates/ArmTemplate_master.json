@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfanalyticspipeline"
+		},
+		"ls_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adls'"
+		},
+		"onPrem_cDrive_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'onPrem_cDrive_ls'"
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adfpipelinesa.dfs.core.windows.net/"
+		},
+		"onPrem_cDrive_ls_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\azure"
+		},
+		"onPrem_cDrive_ls_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "hp-omen\\aravindh"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfanalyticspipeline_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ls_adls_accountKey": {
+						"value": "[parameters('ls_adls_accountKey')]"
+					},
+					"onPrem_cDrive_ls_password": {
+						"value": "[parameters('onPrem_cDrive_ls_password')]"
+					},
+					"ls_adls_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_properties_typeProperties_url')]"
+					},
+					"onPrem_cDrive_ls_properties_typeProperties_host": {
+						"value": "[parameters('onPrem_cDrive_ls_properties_typeProperties_host')]"
+					},
+					"onPrem_cDrive_ls_properties_typeProperties_userId": {
+						"value": "[parameters('onPrem_cDrive_ls_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

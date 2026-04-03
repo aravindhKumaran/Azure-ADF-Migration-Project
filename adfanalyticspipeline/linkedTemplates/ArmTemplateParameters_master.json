@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfanalyticspipeline"
+		},
+		"ls_adls_accountKey": {
+			"value": ""
+		},
+		"onPrem_cDrive_ls_password": {
+			"value": ""
+		},
+		"ls_adls_properties_typeProperties_url": {
+			"value": "https://adfpipelinesa.dfs.core.windows.net/"
+		},
+		"onPrem_cDrive_ls_properties_typeProperties_host": {
+			"value": "C:\\azure"
+		},
+		"onPrem_cDrive_ls_properties_typeProperties_userId": {
+			"value": "hp-omen\\aravindh"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
