@@ -21,7 +21,8 @@
 				"fileName": {
 					"value": "@dataset().fileName",
 					"type": "Expression"
-				}
+				},
+				"folderPath": "data"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

@@ -12,7 +12,8 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FileServerLocation"
+				"type": "FileServerLocation",
+				"folderPath": "data"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
