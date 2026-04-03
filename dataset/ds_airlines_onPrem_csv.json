@@ -1,0 +1,25 @@
+{
+	"name": "ds_airlines_onPrem_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "onPrem_cDrive_ls",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "airlines"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"folderPath": "airlines data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
